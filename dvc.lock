@@ -10,23 +10,23 @@ stages:
       md5: fb634adf680551d55770020a0b4a6761
       size: 265
     - path: ./pipeline/training_data_config.json
-      md5: 3243eeaebbab8e3904aa68c7de50a32d
+      md5: 8d98259544def329922a6726dd8c8d46
       size: 34
     params:
       params.yaml:
         fetch_data.server_type: local
     outs:
     - path: ./data
-      md5: 5c9abdb7195d78af79cc239b46b9dfe5.dir
-      size: 1576666
-      nfiles: 55
+      md5: 3582a0009fbddf89b0791f04b060b1f7.dir
+      size: 1518009
+      nfiles: 53
   tune:
     cmd: python tune.py
     deps:
     - path: ./data
-      md5: 5c9abdb7195d78af79cc239b46b9dfe5.dir
-      size: 1576666
-      nfiles: 55
+      md5: 3582a0009fbddf89b0791f04b060b1f7.dir
+      size: 1518009
+      nfiles: 53
     - path: ./pipeline/tune_params.json
       md5: 2f3652d18c4afc22a7c404a599f08d3a
       size: 349
@@ -44,9 +44,9 @@ stages:
     cmd: python train.py
     deps:
     - path: ./data
-      md5: 5c9abdb7195d78af79cc239b46b9dfe5.dir
-      size: 1576666
-      nfiles: 55
+      md5: 3582a0009fbddf89b0791f04b060b1f7.dir
+      size: 1518009
+      nfiles: 53
     - path: ./pipeline/train_params.json
       md5: 17e28b5f645d112b25873c9aec34f317
       size: 151
