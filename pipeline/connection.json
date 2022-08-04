@@ -1,0 +1,6 @@
+{
+    "connection_string" : {
+        "local" : "server=localhost;database=smart_bi;Trusted_Connection=Yes",
+        "azure" :  "server=moveproject.database.windows.net;database=smart_bi;UID=shivansh@lytiq.de;Authentication=ActiveDirectoryInteractive;"
+    }
+}
