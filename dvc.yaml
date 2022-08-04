@@ -1,0 +1,33 @@
+stages:
+  fetch_data:
+    cmd: python fetch_data.py
+    deps:
+    - ./fetch_data.py
+    - ./pipeline/connection.json
+    - ./pipeline/training_data_config.json
+    params:
+    - fetch_data.server_type
+    outs:
+    - ./data
+  tune:
+    cmd: python tune.py
+    deps:
+    - ./tune.py
+    - ./pipeline/tune_params.json
+    - ./data
+    params:
+    - tune.do_tuning
+    outs:
+    - ./pipeline/train_params.json:
+        persist: true
+  train:
+    cmd: python train.py
+    deps:
+    - ./train.py
+    - ./pipeline/train_params.json
+    - ./data
+    params:
+    - train.do_training
+    outs:
+    - ./models
+
