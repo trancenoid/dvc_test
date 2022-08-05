@@ -1,6 +1,6 @@
-fetch_data :
-  server_type : 'local'
+fetch_data:
+  server_type: local
 tune:
-  do_tuning : True
+  do_tuning: 'false'
 train:
-  do_training : True
+  do_training: true
