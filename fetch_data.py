@@ -31,5 +31,8 @@ data = fetch_data(
 # preprocess data and compute target (weight) columns
 data = process_df(data)
 
-# create moving window splits for evaluation
+# save all the data for fiting the best model
+data.to_csv("data/all_data.csv", index = False)
+
+# create moving window splits for grid search
 create_sliding_window_splits(data,train_data_config['moving_window_size'])
