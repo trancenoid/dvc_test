@@ -28,6 +28,8 @@ data = fetch_data(
     filters_config['channel_ids']
     )
 
+os.makedirs("data", exist_ok=True)
+
 # preprocess data and compute target (weight) columns
 data = process_df(data)
 

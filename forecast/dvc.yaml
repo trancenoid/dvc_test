@@ -1,0 +1,7 @@
+stages:
+  make_forecast:
+    cmd: python ./forecast.py
+    deps:
+    - ./pipeline/test_params.json
+    outs:
+    - forecast.csv
