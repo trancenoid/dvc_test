@@ -1,6 +1,4 @@
-fetch_data:
-  server_type: local
-tune:
-  do_tuning: 'false'
-train:
-  do_training: true
+forecast:
+  start_date : "2022-07-24"
+  num_weeks : 52
+

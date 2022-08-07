@@ -14,7 +14,8 @@ def get_connection():
 
 connection = get_connection()
 
-
+forecast = pd.read_csv("forecast/forecast.csv")
+forecast = forecast[['ds','yhat']]
 forecast['yhat'] = forecast['yhat'].astype(int)
 forecast['week'] = forecast['ds'].dt.isocalendar().week
 forecast['year'] = forecast['ds'].dt.year

@@ -35,7 +35,7 @@ stages:
       size: 1399
     params:
       params.yaml:
-        tune.do_tuning: 'false'
+        tune.do_tuning: true
     outs:
     - path: ./pipeline/train_params.json
       md5: 17e28b5f645d112b25873c9aec34f317

@@ -1,0 +1,12 @@
+schema: '2.0'
+stages:
+  make_forecast:
+    cmd: python ../forecast.py
+    deps:
+    - path: ../pipeline/test_params.json
+      md5: bc0fd0baf44a41fa1e1ae92b4061a792
+      size: 10
+    outs:
+    - path: forecast.csv
+      md5: b97a350138cb5e98a4cfff37b5096033
+      size: 14044
